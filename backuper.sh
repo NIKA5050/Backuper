@@ -1074,6 +1074,7 @@ $DB_CLEANUP
 # Backup database
 $BACKUP_DB_COMMAND
 
+: "${LIMITSIZE:=24}"
 # Compress files
 if ! $COMPRESS "\$backup_name" ${BACKUP_DIRECTORIES[@]}; then
     message="Failed to compress ${REMARK} files. Please check the server."
